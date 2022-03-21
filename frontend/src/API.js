@@ -25,7 +25,7 @@ api.interceptors.request.use(
       config.headers.common["Authorization"] = JSON.parse(
         localStorage.getItem(LOGIN_USER_KEY)
       ).token;
-    }
+    } 
 
     return config;
   },
