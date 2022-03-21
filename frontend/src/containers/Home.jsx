@@ -24,12 +24,12 @@ const Home = () => {
       <MainImage />
       <section class="main">
         <ul class="items">
-          {items &&
+          {items && items.length !== 0 ?
             items.map((item) => (
               <li>
                 <Item key={item.id} item={item} />
               </li>
-            ))}
+            )):"null"}
         </ul>
       </section>
     </>
