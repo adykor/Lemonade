@@ -22,14 +22,14 @@ const Home = () => {
   return (
     <>
       <MainImage />
-      <section class="main">
+      <section class="mainpage">
         <ul class="items">
-          {items && items.length !== 0 ?
+          {items &&
             items.map((item) => (
               <li>
                 <Item key={item.id} item={item} />
               </li>
-            )):"null"}
+            ))}
         </ul>
       </section>
     </>

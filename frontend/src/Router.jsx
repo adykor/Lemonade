@@ -5,7 +5,7 @@ import Home from "./containers/Home";
 import Shipping from "./containers/Shipping";
 import Signin from "./containers/Signin";
 import SignUp from "./containers/SignUp";
-import OrderConfirmation from "./containers/order-confirmation";
+import OrderConfirmation from "./containers/Thankyou";
 
 const Router = () => {
   return (
@@ -18,7 +18,7 @@ const Router = () => {
         <Route exact path={"/shipping"} component={Shipping} />
         <Route
           exact
-          path={"/order-confirmation"}
+          path={"/Thankyou"}
           component={OrderConfirmation}
         />
       </Switch>

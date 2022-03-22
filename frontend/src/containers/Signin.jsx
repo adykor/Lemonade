@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { signIn } from "../reducks/users/operations";
 import Home from "../containers/Home";
-import CrossX from "../assets/img/cross.png";
-import Melodium from "../assets/img/Melodium.svg";
+import Cross from "../assets/img/cross.png";
 import { push } from "connected-react-router";
 
 const Signin = () => {
@@ -34,43 +33,46 @@ const Signin = () => {
       <Home />
       <section class="popup">
         <div class="popup-inner">
-          <div class="popup-preview">
-            <div class="popup-inner">
-              <span onClick={closeButton}>
-                <img src={CrossX} class="close" />
-              </span>
-              <div class="input">
-                <div class="Melodum">
-                  <p class="bold">Lemonade</p>
-                </div>
-                <p class="bold2">SIGN IN</p>
-                <input
-                  type="email"
-                  onChange={inputEmail}
-                  required
-                  placeholder="Email address"
-                  value={email}
-                />{" "}
-                <br />
-                <input
-                  type="password"
-                  onChange={inputPassword}
-                  required
-                  placeholder="Password"
-                  vlaue={password}
-                />
-              </div>
+          <br />
+          <span onClick={closeButton}>
+            <a href="./index.html">
+              <img src={Cross} alt="" />
+            </a>
+          </span>
+          <h1>Lemonade</h1>
+          <br />
+          <h2>SIGN IN</h2>
+          <br />
+          <div class="popup-input">
+            <input
+              type="email"
+              onChange={inputEmail}
+              required
+              placeholder="Email-address"
+              value={email}
+            />
+            <br />
+            <br />
 
-              <button class="button" onClick={signInButton}>
-                SIGN IN
-              </button>
-              <p class="bottom">
-                Not a Member?{" "}
-                <a href="/signup">
-                  <u>Join Us.</u>
-                </a>{" "}
-              </p>
-            </div>
+            <input
+              type="password"
+              onChange={inputPassword}
+              required
+              placeholder="Password"
+              vlaue={password}
+            />
+            <br />
+            <br />
+
+            <button class="btn2" onClick={signInButton}>
+              Sign In
+            </button>
+
+            <br />
+            <br />
+            <p>
+              Not a Member? <a href="/SignUp">Join us</a>
+            </p>
           </div>
         </div>
       </section>

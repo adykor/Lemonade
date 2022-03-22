@@ -10,11 +10,11 @@ const OrderConfirmation = () => {
   }, []);
   return (
     <div>
-      <div class="box">
+      <div class="heading">
         <p>- Thank you for your ordering -</p>
       </div>
 
-      <div class="message">
+      <div class="note">
         <p>
           Thank you for your ordering{" "}
           <span class="color">{user.user_name}</span>. We received your request.{" "}
@@ -24,7 +24,7 @@ const OrderConfirmation = () => {
         </p>
       </div>
 
-      <div class="backhome">
+      <div class="btn3">
         <a href="/">
           <button>Back to Home</button>
         </a>

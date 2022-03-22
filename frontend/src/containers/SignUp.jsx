@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { signUp } from "../reducks/users/operations";
-import CrossX from "../assets/img/cross.png";
+import Cross from "../assets/img/cross.png";
 import Home from "../containers/Home";
 import { push } from "connected-react-router";
-import Melodium from "../assets/img/Melodium.svg";
+// import Melodium from "../assets/img/Melodium.svg";
 
 const SignUp = () => {
   const dispatch = useDispatch();
@@ -33,59 +33,34 @@ const SignUp = () => {
   return (
     <>
       <Home />
-      <section class="popup">
-        <div class="popup-inner">
-          <div class="popup-preview">
-            <div class="popup-inner">
-              <span onClick={closeButton}>
-                <img src={CrossX} class="close" />
-              </span>
-              <div class="input">
-                <div class="Melodum">
-                  
-                  <p class="bold">Lemonade</p>
-                </div>
-                <p class="bold2">SIGN UP</p>
-                <input
-                  type="email"
-                  class="form-control"
-                  onChange={inputUserName}
-                  placeholder="Enter User Name"
-                  value={user_name}
-                  required
-                />
-                <input
-                  type="email"
-                  class="form-control"
-                  onChange={inputEmail}
-                  placeholder="Enter email"
-                  value={email}
-                  required
-                />
-                <br />
-                <input
-                  type="password"
-                  class="form-control"
-                  onChange={inputPassword}
-                  placeholder="Password"
-                  value={password}
-                  required
-                />
-              </div>
 
-              <button class="button" onClick={signUpButton}>
-                SIGN UP
-              </button>
-              <p class="bottom">
-                Already a Member?{" "}
-                <a href="/signin">
-                  <u>Sign In.</u>
-                </a>{" "}
-              </p>
-            </div>
-          </div>
+      <section class="popup">
+      
+      <div class="popup-inner">
+        <br/>
+        <span onClick={closeButton}>
+            <a href="./index.html">
+              <img src={Cross} alt="" />
+            </a>
+          </span>
+        <h1>Lemonade</h1>
+        <br/>
+        <h2>SIGN UP</h2>
+        <br/>
+        <div class="popup-input">
+          <input type="text" onChange={inputUserName} required placeholder="User-name" value={user_name} />
+          <br /><br />
+          <input type="email"  onChange={inputEmail} required placeholder="Email-address" value={email}  />
+          <br /><br />
+          <input type="password" onChange={inputPassword} required placeholder="Password" value={password} />
+          <br />
+          <br />
+          <button class="btn2" onClick={signUpButton} >Sign Up</button>
+          <br /><br />
+          <p>Already a Member? <a href="./signin.html">Sign in</a></p>
         </div>
-      </section>
+      </div>
+    </section>
     </>
   );
 };

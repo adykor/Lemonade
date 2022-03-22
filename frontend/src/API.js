@@ -8,7 +8,7 @@ var baseURL;
 // ) {
 //   baseURL = process.env.REACT_APP_API_BASE_URL;
 // } else 
-  // baseURL = "http://127.0.0.1:8000";
+// baseURL = "http://127.0.0.1:8000";
 // }
 baseURL = "https://backend-kyerstin.herokuapp.com/";
 
@@ -25,7 +25,7 @@ api.interceptors.request.use(
       config.headers.common["Authorization"] = JSON.parse(
         localStorage.getItem(LOGIN_USER_KEY)
       ).token;
-    } 
+    }
 
     return config;
   },

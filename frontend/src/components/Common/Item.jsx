@@ -46,10 +46,12 @@ const Item = ({ item }) => {
   };
   return (
 		<div>
+      	<div class="container">
+        <div class="one">
 						<img src={item.image} alt="" />
-						<div class="info">
+					
 							<div class="name">{item.name}</div>
-							<div class="info-bottom">
+							
 								<div class="price">${item.price}</div>
 								{particularCart && particularCart.quantity > 0 ? (
 									<div class="number">
@@ -62,7 +64,7 @@ const Item = ({ item }) => {
 										</span>
 									</div>
 								) : (
-									<div class="add" onClick={clickAddCart}>
+									<div class="btn1" onClick={clickAddCart}>
 										Add +
 									</div>
 								)}

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ImageCartLogo from "../../assets/img/cart.png";
+import CartLogo from "../../assets/img/cart.png";
 import { signOut } from "../../reducks/users/operations";
 import { useDispatch } from "react-redux";
 import { push } from "connected-react-router";
@@ -22,34 +22,32 @@ export default function Header() {
   }, [key]);
 
   return (
-    <header>
-      <section class="header-box">
-        <a href="/">
-          <div class="header">
-            <span class="views">Lemonade</span>
-          </div>
-        </a>
-        <div class="header-links">
-          <p class="sign-in-link">
-            {checkUser ? (
-              <span class="logout" onClick={signOutButton}>
-                Logout
-              </span>
-            ) : (
-              <a href="/signin" class="sign-in">
-                Sign In
-              </a>
-            )}
-          </p>
-          {checkUser && (
-            <p class="img">
-              <a href="/cart">
-                <img src={ImageCartLogo} alt="" />
-              </a>
-            </p>
-          )}
+    <section class="mainheader">
+      <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <a href="/" class="navbar-brand">
+            Lemonade
+          </a>
+          <form class="d-flex">
+            <div class="cart">
+              {checkUser ? (
+                <span class="logout" onClick={signOutButton}>
+                  Logout
+                </span>
+              ) : (
+                <a href="/Signin" class="sign">
+                  Sign in
+                </a>
+              )}
+              {checkUser && (
+                <a href="/cart" >
+                  <img src={CartLogo} class= "cartlogo" alt="" />
+                </a>
+              )}
+            </div>
+          </form>
         </div>
-      </section>
-    </header>
+      </nav>
+    </section>
   );
 }

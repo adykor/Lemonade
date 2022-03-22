@@ -23,24 +23,29 @@ const Cart = () => {
 	return (
 		<>
 			<MainImage />
-			<section class="content">
-				<ul class="items">
+			<ul>
+			<li>
+
+			<div class="container">
+				<div class="one">
 					{
 						(carts,
 						items &&
 							carts.map((cart) => (
-								<li>
+								
 									<CartItem
 										cart={cart.item}
 										cartId={cart.id}
 										key={cart.item.id}
 										quantity={cart.quantity}
 									/>
-								</li>
+								
 							)))
 					}
-				</ul>
-			</section>
+				</div>
+			</div>
+			</li>
+			</ul>
 		</>
 	);
 };

@@ -2,6 +2,7 @@ from django.db import models
 from apps.users.models import User
 from apps.items.models import Item
 
+
 class Cart(models.Model):
     class Meta:
         db_table = 'cart'
@@ -21,5 +22,3 @@ class Cart(models.Model):
     updated_at = models.DateTimeField(
         'Updated At', blank=True, auto_now=True
     )
-
-    
