@@ -20,7 +20,7 @@ const OrderConfirmation = () => {
           <span class="color">{user.user_name}</span>. We received your request.{" "}
           <br />
           <br />
-          Our staff will be contacting with you to tell next steps.
+          Check your email for your order confirmation and shipping information!
         </p>
       </div>
 
