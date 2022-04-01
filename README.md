@@ -1,6 +1,5 @@
 # Lemonade
-This is a mini e-commerce project that allows users to purchase handcrafted lemonades from home.
-
+This is a mini e-commerce project that allows users to order handcrafted lemonades from home.
 
 ## Live Demo
 Check out [FRONTEND LIVE DEMO](https://frontend-kyerstin.herokuapp.com/) here!
