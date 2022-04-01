@@ -1,54 +1,21 @@
-# Forum App in React & Redux + Django
+# Lemonade
+This is a mini e-commerce project that allows users to purchase handcrafted lemonades from home.
 
-```
-Forum App, with a frontend built in React & Redux and a backend built in Django API.
-```
 
 ## Live Demo
+Check out [FRONTEND LIVE DEMO](https://frontend-kyerstin.herokuapp.com/) here!
+Check out [BACKEND LIVE DEMO](https://backend-kyerstin.herokuapp.com/) here!
 
-**This App uses a Heroku free plan, so I am afraid that it takes time to load the pages.**
+https://user-images.githubusercontent.com/80643320/161335482-a265178b-6585-4280-b8f4-dbcacc9be846.mp4
 
-Check out [FRONTEND LIVE DEMO](https://forum-prod-frontend.herokuapp.com/) here!!
+## Technologies Used
+* HTML
+* CSS
+* React
+* Redux
+* Django
 
-Check out [API LIVE DEMO](https://forum-prod-api.herokuapp.com/) here!!
-
-## Tech used
-
-```
-* Frontend : React & Redux
-* Backend : Django
-```
-
-## How to Install
-
-1. Git Clone
-
-```
-git clone git@github.com:Tech-i-s/techis-wd-forum-django-react.git
-```
-
-2. Backend setting
-
-```
-cd backend
-Python -m venv env
-(For Mac) source env/bin/activate
-(For Windows) env/Scripts\activate
-pip install -r requirements.txt
-python manage.py makemigrations
-python manage.py migrate
-python manage.py runserver
-# Open http://127.0.0.1:8000/posts/
-
-# To have dummy data for testing run:
-python manage.py fixtures/dummy-data.json
-```
-
-3. Frontend setting
-
-```
-cd frontend
-npm install
-npm start
-# Open http://127.0.0.1:3000/
-```
+## User Story
+* User can sign in/sign up.
+* User can add lemonades to their cart.
+* User can input shipping information and checkout.
